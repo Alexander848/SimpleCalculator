@@ -2,7 +2,7 @@
 
 namespace SimpleCalculatorApplication
 {
-    partial class Calculator
+    partial class CalculatorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -154,12 +154,14 @@ namespace SimpleCalculatorApplication
             this.btnDeleteInput.Name = "btnDeleteInput";
             this.btnDeleteInput.TabIndex = 15;
             this.btnDeleteInput.Text = "C";
+            this.btnDeleteInput.Click += (s, e) => EntryButton_Click(s, e, "C");
             // 
             // btnCalculate
             // 
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.TabIndex = 16;
             this.btnCalculate.Text = "=";
+            this.btnCalculate.Click += (s, e) => EntryButton_Click(s, e, "=");
             // 
             // tableLayoutPanel
             // 
@@ -205,6 +207,7 @@ namespace SimpleCalculatorApplication
             this.Text = "Calculator";
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.Load += Calculator_Load;
         }
