@@ -19,11 +19,11 @@ namespace SimpleCalculatorApplication
 
         private void Calculator_Load(object sender, EventArgs e)
         {
-            setElementProperties();
+            SetElementProperties();
         }
 
         // Sets Element Fills Container, Font
-        private void setElementProperties()
+        private void SetElementProperties()
         {
             foreach (Control child in this.tableLayoutPanel.Controls)
             {
@@ -48,26 +48,14 @@ namespace SimpleCalculatorApplication
                 {
                     this.txtBoxUserEntry.Text = currentInput.Remove(currentInput.Length - 1);
                 }
-                return;
             }
             else if (input.Equals("="))
             {
-                this.txtBoxUserEntry.Text = CalculateMathematicalInput(input);
-                return;
+                this.txtBoxUserEntry.Text = CalculationLogic.CalculateMathematicalInput(this.txtBoxUserEntry.Text);
+            } else
+            {
+                this.txtBoxUserEntry.Text += input;
             }
-            this.txtBoxUserEntry.Text += input;
-        }
-
-        /// <summary>
-        /// Takes a string of a mathematical calculation and calculates result.
-        /// </summary>
-        /// <param name="input">String of mathematical calculation</param>
-        /// <returns>String of calculation result or "error"</returns>
-        private String CalculateMathematicalInput(String input)
-        {
-            List<String> tokens = CalculationLogic.TokenizeCalculation(input);
-
-            return CalculationLogic.CalculateTokensRecursively(tokens);
         }
     }
 }
