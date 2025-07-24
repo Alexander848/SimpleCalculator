@@ -22,6 +22,7 @@ namespace SimpleCalculatorApplication
             setElementProperties();
         }
 
+        // Sets Element Fills Container, Font
         private void setElementProperties()
         {
             foreach (Control child in this.tableLayoutPanel.Controls)
@@ -29,6 +30,11 @@ namespace SimpleCalculatorApplication
                 child.Dock = System.Windows.Forms.DockStyle.Fill;
                 child.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
             }
+        }
+
+        private void EntryButton_Click(object sender, EventArgs e, String input)
+        {
+            this.txtBoxUserEntry.Text += input;
         }
     }
 }

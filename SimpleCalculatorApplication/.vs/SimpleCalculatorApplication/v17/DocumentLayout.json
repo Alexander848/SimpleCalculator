@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|solutionrelative:calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\calculator.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|solutionrelative:calculator.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|c:\\users\\alexa\\desktop\\programmieren\\arbeitsbereich\\simplecalculator\\simplecalculatorapplication\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|solutionrelative:calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|c:\\users\\alexa\\desktop\\programmieren\\arbeitsbereich\\simplecalculator\\simplecalculatorapplication\\calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{862AE48B-9A95-44EA-8534-8E998EEB178F}|SimpleCalculatorApplication.csproj|solutionrelative:calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +26,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Calculator.cs",
               "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\Calculator.cs",
               "RelativeDocumentMoniker": "Calculator.cs",
               "ToolTip": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\Calculator.cs",
               "RelativeToolTip": "Calculator.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB0AAAAzAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T11:43:17.82Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Calculator.Designer.cs",
               "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\Calculator.Designer.cs",
               "RelativeDocumentMoniker": "Calculator.Designer.cs",
               "ToolTip": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\Calculator.Designer.cs",
               "RelativeToolTip": "Calculator.Designer.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAcwDUAAABJAAAA",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAAAK8AAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T11:43:06.875Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Calculator.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\Calculator.cs",
-              "RelativeDocumentMoniker": "Calculator.cs",
-              "ToolTip": "C:\\Users\\alexa\\Desktop\\Programmieren\\Arbeitsbereich\\SimpleCalculator\\SimpleCalculatorApplication\\Calculator.cs [Design]",
-              "RelativeToolTip": "Calculator.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T11:43:03.768Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
