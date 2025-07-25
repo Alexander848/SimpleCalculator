@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimpleCalculatorLogic\SimpleCalculatorLogic.csproj" />
+    <ProjectReference Include="..\SimpleCalculatorLogic\SimpleCalculator.Logic.csproj" />
   </ItemGroup>
 
 </Project>

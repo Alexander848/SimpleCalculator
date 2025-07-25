@@ -1,7 +1,7 @@
-using System;
-using NUnit.Framework;
 
-namespace SimpleCalculatorApplication.Tests
+using SimpleCalculator.Logic;
+
+namespace SimpleCalculator.Test
 {
 
     [TestFixture]
@@ -13,7 +13,7 @@ namespace SimpleCalculatorApplication.Tests
             String actual = CalculationLogic.CalculateMathematicalInput("");
             String expected = "";
 
-            Assert.That(expected.Equals(actual));
+            Assert.That(actual, Is.EqualTo(expected));
         }
     }
 }
