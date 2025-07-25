@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using NUnit.Framework.Legacy;
 
 namespace SimpleCalculatorApplication.Tests
 {
@@ -11,10 +10,10 @@ namespace SimpleCalculatorApplication.Tests
         [Test]
         public void TokenizeCalculation_EmptyInput()
         {
-            String result = CalculationLogic.CalculateMathematicalInput("");
+            String actual = CalculationLogic.CalculateMathematicalInput("");
             String expected = "";
 
-            ClassicAssert.AreEqual(expected, result);
+            Assert.That(expected.Equals(actual));
         }
     }
 }
