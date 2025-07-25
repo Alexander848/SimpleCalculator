@@ -22,13 +22,21 @@ namespace SimpleCalculatorApplication
             SetElementProperties();
         }
 
-        // Sets Element Fills Container, Font
+        /// <summary>
+        /// Sets Element Fills Container, Font, Background Color.
+        /// </summary>
         private void SetElementProperties()
         {
+            this.tableLayoutPanel.BackColor = Color.DarkBlue;
+
             foreach (Control child in this.tableLayoutPanel.Controls)
             {
                 child.Dock = System.Windows.Forms.DockStyle.Fill;
                 child.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
+                if (child != this.btnCalculate)
+                    child.BackColor = Color.LightBlue;
+                else
+                    child.BackColor = Color.LightGreen;
             }
         }
 
@@ -41,13 +49,19 @@ namespace SimpleCalculatorApplication
         /// <param name="input">String Value of Input Button</param>
         private void EntryButton_Click(object sender, EventArgs e, String input)
         {
-            if (input.Equals("C"))
+            if (this.txtBoxUserEntry.Text.Equals("error"))
+                this.txtBoxUserEntry.Text = "";
+
+            if (input.Equals("CE"))
             {
                 String currentInput = this.txtBoxUserEntry.Text;
                 if (currentInput != null && !currentInput.Equals(""))
                 {
                     this.txtBoxUserEntry.Text = currentInput.Remove(currentInput.Length - 1);
                 }
+            } else if (input.Equals("AC"))
+            {
+                this.txtBoxUserEntry.Text = "";
             }
             else if (input.Equals("="))
             {

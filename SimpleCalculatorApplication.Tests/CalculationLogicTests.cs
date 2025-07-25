@@ -1,17 +1,20 @@
+using System;
+using NUnit.Framework;
+using NUnit.Framework.Legacy;
+
 namespace SimpleCalculatorApplication.Tests
 {
 
     [TestFixture]
     public class CalculationLogicTests
     {
-        /*
         [Test]
         public void TokenizeCalculation_EmptyInput()
         {
-            List<String> result = CalculationLogic.TokenizeCalculation("");
-            List<String> expected = new List<String>();
+            String result = CalculationLogic.CalculateMathematicalInput("");
+            String expected = "";
 
-            CollectionAssert.AreEqual(expected, result);
-        }*/
+            ClassicAssert.AreEqual(expected, result);
+        }
     }
 }
