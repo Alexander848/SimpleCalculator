@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleCalculator.Logic;
 
-namespace SimpleCalculatorApplication
+namespace SimpleCalculator.Application
 {
     public partial class CalculatorForm : Form
     {
@@ -20,6 +21,27 @@ namespace SimpleCalculatorApplication
         private void Calculator_Load(object sender, EventArgs e)
         {
             SetElementProperties();
+
+            this.btnNumberOne.Click += (s,e) => InputButton_Click("1");
+            this.btnNumberFour.Click += (s,e) => InputButton_Click("4");
+            this.btnNumberSeven.Click += (s,e) => InputButton_Click("7");
+            this.btnDecimalPoint.Click += (s,e) => InputButton_Click(".");
+            this.btnNumberTwo.Click += (s,e) => InputButton_Click("2");
+            this.btnNumberFive.Click += (s,e) => InputButton_Click("5");
+            this.btnNumberEight.Click += (s,e) => InputButton_Click("8");
+            this.btnNumberZero.Click += (s,e) => InputButton_Click("0");
+            this.btnNumberThree.Click += (s,e) => InputButton_Click("3");
+            this.btnNumberSix.Click += (s,e) => InputButton_Click("6");
+            this.btnNumberNine.Click += (s,e) => InputButton_Click("9");
+            this.btnCalculate.Click += (s,e) => InputButton_Click("=");
+            this.btnOpenBracket.Click += (s,e) => InputButton_Click("(");
+            this.btnPlus.Click += (s,e) => InputButton_Click("+");
+            this.btnMultiplication.Click += (s,e) => InputButton_Click("*");
+            this.btnClearEntry.Click += (s,e) => InputButton_Click("CE");
+            this.btnClosingBracket.Click += (s,e) => InputButton_Click(")");
+            this.btnMinus.Click += (s,e) => InputButton_Click("-");
+            this.btnDivision.Click += (s,e) => InputButton_Click("/");
+            this.btnAllClear.Click += (s,e) => InputButton_Click("AC");
         }
 
         /// <summary>
@@ -44,10 +66,8 @@ namespace SimpleCalculatorApplication
         /// Depending on Button, handles input. Either add value to txtBoxUserEntry,
         /// remove element from txtBoxUserEntry or calculate txtBoxUserEntry.
         /// </summary>
-        /// <param name="sender">Sender Object</param>
-        /// <param name="e">Event</param>
         /// <param name="input">String Value of Input Button</param>
-        private void EntryButton_Click(object sender, EventArgs e, String input)
+        private void InputButton_Click(String input)
         {
             if (this.txtBoxUserEntry.Text.Equals("error"))
                 this.txtBoxUserEntry.Text = "";
@@ -57,16 +77,18 @@ namespace SimpleCalculatorApplication
                 String currentInput = this.txtBoxUserEntry.Text;
                 if (currentInput != null && !currentInput.Equals(""))
                 {
-                    this.txtBoxUserEntry.Text = currentInput.Remove(currentInput.Length - 1);
+                    this.txtBoxUserEntry.Text = currentInput[..^1];
                 }
-            } else if (input.Equals("AC"))
+            }
+            else if (input.Equals("AC"))
             {
                 this.txtBoxUserEntry.Text = "";
             }
             else if (input.Equals("="))
             {
                 this.txtBoxUserEntry.Text = CalculationLogic.CalculateMathematicalInput(this.txtBoxUserEntry.Text);
-            } else
+            }
+            else
             {
                 this.txtBoxUserEntry.Text += input;
             }

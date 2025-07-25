@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace SimpleCalculatorApplication
+namespace SimpleCalculator.Logic
 {
     public class CalculationLogic
     {
@@ -20,7 +20,7 @@ namespace SimpleCalculatorApplication
 
             try
             {
-                return new DataTable().Compute(input, null).ToString();
+                return (new DataTable().Compute(input, null).ToString()) ?? "";
             }
             catch (Exception)
             {

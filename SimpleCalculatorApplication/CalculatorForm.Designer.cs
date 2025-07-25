@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace SimpleCalculatorApplication
+namespace SimpleCalculator.Application
 {
     partial class CalculatorForm
     {
@@ -68,143 +68,120 @@ namespace SimpleCalculatorApplication
             this.btnNumberOne.Name = "btnNumberOne";
             this.btnNumberOne.TabIndex = 1;
             this.btnNumberOne.Text = "1";
-            this.btnNumberOne.Click += (s,e) => EntryButton_Click(s, e, "1");
             // 
             // btnNumberFour
             //
             this.btnNumberFour.Name = "btnNumberFour";
             this.btnNumberFour.TabIndex = 6;
             this.btnNumberFour.Text = "4";
-            this.btnNumberFour.Click += (s, e) => EntryButton_Click(s, e, "4");
             // 
             // btnNumberSeven
             //
             this.btnNumberSeven.Name = "btnNumberSeven";
             this.btnNumberSeven.TabIndex = 11;
             this.btnNumberSeven.Text = "7";
-            this.btnNumberSeven.Click += (s, e) => EntryButton_Click(s, e, "7");
             // 
             // btnDecimalPoint
             // 
             this.btnDecimalPoint.Name = "btnDecimalPoint";
             this.btnDecimalPoint.TabIndex = 16;
             this.btnDecimalPoint.Text = ".";
-            this.btnDecimalPoint.Click += (s, e) => EntryButton_Click(s, e, ".");
             // 
             // btnNumberTwo
             //
             this.btnNumberTwo.Name = "btnNumberTwo";
             this.btnNumberTwo.TabIndex = 2;
             this.btnNumberTwo.Text = "2";
-            this.btnNumberTwo.Click += (s, e) => EntryButton_Click(s, e, "2");
             // 
             // btnNumberFive
             //
             this.btnNumberFive.Name = "btnNumberFive";
             this.btnNumberFive.TabIndex = 7;
             this.btnNumberFive.Text = "5";
-            this.btnNumberFive.Click += (s, e) => EntryButton_Click(s, e, "5");
             // 
             // btnNumberEight
             //
             this.btnNumberEight.Name = "btnNumberEight";
             this.btnNumberEight.TabIndex = 12;
             this.btnNumberEight.Text = "8";
-            this.btnNumberEight.Click += (s, e) => EntryButton_Click(s, e, "8");
             // 
             // btnNumberZero
             // 
             this.btnNumberZero.Name = "btnNumberZero";
             this.btnNumberZero.TabIndex = 17;
             this.btnNumberZero.Text = "0";
-            this.btnNumberZero.Click += (s, e) => EntryButton_Click(s, e, "0");
             // 
             // btnNumberThree
             //
             this.btnNumberThree.Name = "btnNumberThree";
             this.btnNumberThree.TabIndex = 3;
             this.btnNumberThree.Text = "3";
-            this.btnNumberThree.Click += (s, e) => EntryButton_Click(s, e, "3");
             // 
             // btnNumberSix
             // 
             this.btnNumberSix.Name = "btnNumberSix";
             this.btnNumberSix.TabIndex = 8;
             this.btnNumberSix.Text = "6";
-            this.btnNumberSix.Click += (s, e) => EntryButton_Click(s, e, "6");
             // 
             // btnNumberNine
             // 
             this.btnNumberNine.Name = "btnNumberNine";
             this.btnNumberNine.TabIndex = 13;
             this.btnNumberNine.Text = "9";
-            this.btnNumberNine.Click += (s, e) => EntryButton_Click(s, e, "9");
             // 
             // btnCalculate
             // 
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.TabIndex = 18;
             this.btnCalculate.Text = "=";
-            this.btnCalculate.Click += (s, e) => EntryButton_Click(s, e, "=");
             // 
             // btnOpenBracket
             //
             this.btnOpenBracket.Name = "btnOpenBracket";
             this.btnOpenBracket.TabIndex = 4;
             this.btnOpenBracket.Text = "(";
-            this.btnOpenBracket.Click += (s, e) => EntryButton_Click(s, e, "(");
             // 
             // btnPlus
             //
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.TabIndex = 9;
             this.btnPlus.Text = "+";
-            this.btnPlus.Click += (s, e) => EntryButton_Click(s, e, "+");
             // 
             // btnMultiplication
             //
             this.btnMultiplication.Name = "btnMultiplication";
             this.btnMultiplication.TabIndex = 14;
             this.btnMultiplication.Text = "*";
-            this.btnMultiplication.Click += (s, e) => EntryButton_Click(s, e, "*");
             // 
             // btnClearEntry
             //
             this.btnClearEntry.Name = "btnClearEntry";
             this.btnClearEntry.TabIndex = 19;
             this.btnClearEntry.Text = "CE";
-            this.btnClearEntry.Click += (s, e) => EntryButton_Click(s, e, "CE");
             // 
             // btnClosingBracket
             //
             this.btnClosingBracket.Name = "btnClosingBracket";
-            this.btnClosingBracket.Size = new System.Drawing.Size(77, 74);
             this.btnClosingBracket.TabIndex = 5;
             this.btnClosingBracket.Text = ")";
-            this.btnClosingBracket.Click += (s, e) => EntryButton_Click(s, e, ")");
             // 
             // btnMinus
             //
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(77, 74);
             this.btnMinus.TabIndex = 10;
             this.btnMinus.Text = "-";
-            this.btnMinus.Click += (s, e) => EntryButton_Click(s, e, "-");
             // 
             // btnDivision
             //
             this.btnDivision.Name = "btnDivision";
-            this.btnDivision.Size = new System.Drawing.Size(77, 74);
             this.btnDivision.TabIndex = 15;
             this.btnDivision.Text = "/";
-            this.btnDivision.Click += (s, e) => EntryButton_Click(s, e, "/");
             // 
             // btnAllClear
             // 
             this.btnAllClear.Name = "btnAllClear";
             this.btnAllClear.TabIndex = 20;
             this.btnAllClear.Text = "AC";
-            this.btnAllClear.Click += (s, e) => EntryButton_Click(s, e, "AC");
             // 
             // tableLayoutPanel
             // 

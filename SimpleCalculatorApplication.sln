@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculatorApplication", "SimpleCalculatorApplication\SimpleCalculatorApplication.csproj", "{6246DD5E-DB60-41E9-B141-450782938F91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator.Application", "SimpleCalculatorApplication\SimpleCalculator.Application.csproj", "{6246DD5E-DB60-41E9-B141-450782938F91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculatorLogic", "SimpleCalculatorLogic\SimpleCalculatorLogic.csproj", "{9F49D214-9639-4EB8-8324-448C1BC27815}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator.Logic", "SimpleCalculatorLogic\SimpleCalculator.Logic.csproj", "{9F49D214-9639-4EB8-8324-448C1BC27815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculatorTest", "SimpleCalculatorTest\SimpleCalculatorTest.csproj", "{4C4ED24E-4A73-4620-B325-E6FD4E7C3A7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator.Test", "SimpleCalculatorTest\SimpleCalculator.Test.csproj", "{4C4ED24E-4A73-4620-B325-E6FD4E7C3A7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
