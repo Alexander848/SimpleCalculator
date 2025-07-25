@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace SimpleCalculatorApplication
 {
@@ -22,8 +23,6 @@ namespace SimpleCalculatorApplication
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -34,18 +33,23 @@ namespace SimpleCalculatorApplication
             this.btnNumberOne = new System.Windows.Forms.Button();
             this.btnNumberFour = new System.Windows.Forms.Button();
             this.btnNumberSeven = new System.Windows.Forms.Button();
+            this.btnDecimalPoint = new System.Windows.Forms.Button();
             this.btnNumberTwo = new System.Windows.Forms.Button();
             this.btnNumberFive = new System.Windows.Forms.Button();
             this.btnNumberEight = new System.Windows.Forms.Button();
+            this.btnNumberZero = new System.Windows.Forms.Button();
             this.btnNumberThree = new System.Windows.Forms.Button();
             this.btnNumberSix = new System.Windows.Forms.Button();
             this.btnNumberNine = new System.Windows.Forms.Button();
-            this.btnOpenBracket = new System.Windows.Forms.Button();
-            this.btnNumberZero = new System.Windows.Forms.Button();
-            this.btnDecimalPoint = new System.Windows.Forms.Button();
-            this.btnClosingBracket = new System.Windows.Forms.Button();
-            this.btnDeleteInput = new System.Windows.Forms.Button();
             this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnOpenBracket = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnMultiplication = new System.Windows.Forms.Button();
+            this.btnClearEntry = new System.Windows.Forms.Button();
+            this.btnClosingBracket = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnDivision = new System.Windows.Forms.Button();
+            this.btnAllClear = new System.Windows.Forms.Button();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +58,8 @@ namespace SimpleCalculatorApplication
             // 
             this.tableLayoutPanel.SetColumnSpan(this.txtBoxUserEntry, 5);
             this.txtBoxUserEntry.Multiline = true;
+            this.txtBoxUserEntry.WordWrap = false;
+            this.txtBoxUserEntry.AcceptsReturn = false;
             this.txtBoxUserEntry.Name = "txtBoxUserEntry";
             this.txtBoxUserEntry.TabIndex = 0;
             // 
@@ -78,6 +84,13 @@ namespace SimpleCalculatorApplication
             this.btnNumberSeven.Text = "7";
             this.btnNumberSeven.Click += (s, e) => EntryButton_Click(s, e, "7");
             // 
+            // btnDecimalPoint
+            // 
+            this.btnDecimalPoint.Name = "btnDecimalPoint";
+            this.btnDecimalPoint.TabIndex = 16;
+            this.btnDecimalPoint.Text = ".";
+            this.btnDecimalPoint.Click += (s, e) => EntryButton_Click(s, e, ".");
+            // 
             // btnNumberTwo
             //
             this.btnNumberTwo.Name = "btnNumberTwo";
@@ -98,6 +111,13 @@ namespace SimpleCalculatorApplication
             this.btnNumberEight.TabIndex = 12;
             this.btnNumberEight.Text = "8";
             this.btnNumberEight.Click += (s, e) => EntryButton_Click(s, e, "8");
+            // 
+            // btnNumberZero
+            // 
+            this.btnNumberZero.Name = "btnNumberZero";
+            this.btnNumberZero.TabIndex = 17;
+            this.btnNumberZero.Text = "0";
+            this.btnNumberZero.Click += (s, e) => EntryButton_Click(s, e, "0");
             // 
             // btnNumberThree
             //
@@ -120,6 +140,13 @@ namespace SimpleCalculatorApplication
             this.btnNumberNine.Text = "9";
             this.btnNumberNine.Click += (s, e) => EntryButton_Click(s, e, "9");
             // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.TabIndex = 18;
+            this.btnCalculate.Text = "=";
+            this.btnCalculate.Click += (s, e) => EntryButton_Click(s, e, "=");
+            // 
             // btnOpenBracket
             //
             this.btnOpenBracket.Name = "btnOpenBracket";
@@ -127,19 +154,26 @@ namespace SimpleCalculatorApplication
             this.btnOpenBracket.Text = "(";
             this.btnOpenBracket.Click += (s, e) => EntryButton_Click(s, e, "(");
             // 
-            // btnNumberZero
+            // btnPlus
+            //
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.TabIndex = 9;
+            this.btnPlus.Text = "+";
+            this.btnPlus.Click += (s, e) => EntryButton_Click(s, e, "+");
             // 
-            this.btnNumberZero.Name = "btnNumberZero";
-            this.btnNumberZero.TabIndex = 9;
-            this.btnNumberZero.Text = "0";
-            this.btnNumberZero.Click += (s, e) => EntryButton_Click(s, e, "0");
+            // btnMultiplication
+            //
+            this.btnMultiplication.Name = "btnMultiplication";
+            this.btnMultiplication.TabIndex = 14;
+            this.btnMultiplication.Text = "*";
+            this.btnMultiplication.Click += (s, e) => EntryButton_Click(s, e, "*");
             // 
-            // btnDecimalPoint
-            // 
-            this.btnDecimalPoint.Name = "btnDecimalPoint";
-            this.btnDecimalPoint.TabIndex = 14;
-            this.btnDecimalPoint.Text = ".";
-            this.btnDecimalPoint.Click += (s, e) => EntryButton_Click(s, e, ".");
+            // btnClearEntry
+            //
+            this.btnClearEntry.Name = "btnClearEntry";
+            this.btnClearEntry.TabIndex = 19;
+            this.btnClearEntry.Text = "CE";
+            this.btnClearEntry.Click += (s, e) => EntryButton_Click(s, e, "CE");
             // 
             // btnClosingBracket
             //
@@ -149,19 +183,28 @@ namespace SimpleCalculatorApplication
             this.btnClosingBracket.Text = ")";
             this.btnClosingBracket.Click += (s, e) => EntryButton_Click(s, e, ")");
             // 
-            // btnDeleteInput
+            // btnMinus
+            //
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(77, 74);
+            this.btnMinus.TabIndex = 10;
+            this.btnMinus.Text = "-";
+            this.btnMinus.Click += (s, e) => EntryButton_Click(s, e, "-");
             // 
-            this.btnDeleteInput.Name = "btnDeleteInput";
-            this.btnDeleteInput.TabIndex = 15;
-            this.btnDeleteInput.Text = "C";
-            this.btnDeleteInput.Click += (s, e) => EntryButton_Click(s, e, "C");
+            // btnDivision
+            //
+            this.btnDivision.Name = "btnDivision";
+            this.btnDivision.Size = new System.Drawing.Size(77, 74);
+            this.btnDivision.TabIndex = 15;
+            this.btnDivision.Text = "/";
+            this.btnDivision.Click += (s, e) => EntryButton_Click(s, e, "/");
             // 
-            // btnCalculate
+            // btnAllClear
             // 
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.TabIndex = 16;
-            this.btnCalculate.Text = "=";
-            this.btnCalculate.Click += (s, e) => EntryButton_Click(s, e, "=");
+            this.btnAllClear.Name = "btnAllClear";
+            this.btnAllClear.TabIndex = 20;
+            this.btnAllClear.Text = "AC";
+            this.btnAllClear.Click += (s, e) => EntryButton_Click(s, e, "AC");
             // 
             // tableLayoutPanel
             // 
@@ -175,25 +218,31 @@ namespace SimpleCalculatorApplication
             this.tableLayoutPanel.Controls.Add(this.btnNumberOne, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.btnNumberFour, 0, 2);
             this.tableLayoutPanel.Controls.Add(this.btnNumberSeven, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnDecimalPoint, 0, 4);
             this.tableLayoutPanel.Controls.Add(this.btnNumberTwo, 1, 1);
             this.tableLayoutPanel.Controls.Add(this.btnNumberFive, 1, 2);
             this.tableLayoutPanel.Controls.Add(this.btnNumberEight, 1, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnNumberZero, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.btnNumberThree, 2, 1);
             this.tableLayoutPanel.Controls.Add(this.btnNumberSix, 2, 2);
             this.tableLayoutPanel.Controls.Add(this.btnNumberNine, 2, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnCalculate, 2, 4);
             this.tableLayoutPanel.Controls.Add(this.btnOpenBracket, 3, 1);
-            this.tableLayoutPanel.Controls.Add(this.btnNumberZero, 3, 2);
-            this.tableLayoutPanel.Controls.Add(this.btnDecimalPoint, 3, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnPlus, 3, 2);
+            this.tableLayoutPanel.Controls.Add(this.btnMultiplication, 3, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnClearEntry, 3, 4);
             this.tableLayoutPanel.Controls.Add(this.btnClosingBracket, 4, 1);
-            this.tableLayoutPanel.Controls.Add(this.btnDeleteInput, 4, 2);
-            this.tableLayoutPanel.Controls.Add(this.btnCalculate, 4, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnMinus, 4, 2);
+            this.tableLayoutPanel.Controls.Add(this.btnDivision, 4, 3);
+            this.tableLayoutPanel.Controls.Add(this.btnAllClear, 4, 4);
             this.tableLayoutPanel.Location = new System.Drawing.Point(20, 144);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 4;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel.RowCount = 5;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel.Padding = new Padding(5);
             this.tableLayoutPanel.Dock = DockStyle.Fill;
             // 
@@ -212,24 +261,27 @@ namespace SimpleCalculatorApplication
             this.Load += Calculator_Load;
         }
 
-        #endregion
-
         private System.Windows.Forms.TextBox txtBoxUserEntry;
         private Button btnNumberOne;
         private Button btnNumberFour;
         private Button btnNumberSeven;
+        private Button btnDecimalPoint;
         private Button btnNumberTwo;
         private Button btnNumberFive;
         private Button btnNumberEight;
+        private Button btnNumberZero;
         private Button btnNumberThree;
         private Button btnNumberSix;
         private Button btnNumberNine;
-        private Button btnOpenBracket;
-        private Button btnNumberZero;
-        private Button btnDecimalPoint;
-        private Button btnClosingBracket;
-        private Button btnDeleteInput;
         private Button btnCalculate;
+        private Button btnOpenBracket;
+        private Button btnPlus;
+        private Button btnMultiplication;
+        private Button btnClearEntry;
+        private Button btnClosingBracket;
+        private Button btnMinus;
+        private Button btnDivision;
+        private Button btnAllClear;
         private TableLayoutPanel tableLayoutPanel;
     }
 }
