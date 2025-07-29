@@ -1,5 +1,7 @@
 # SimpleCalculator
 
+Practice Goals: WinForms, C#, Project Structure, Git
+
 WinForms Calculator Application
 
 Practice project used to learn basic winforms, c#, visual studio and git practices.
